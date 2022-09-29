@@ -1,0 +1,46 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: 1.7.0_no_kubectl
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/indigo-dc/orchestrator:
+      branch: master
+      repo: https://github.com/indigo-dc/orchestrator
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/indigo-dc/orchestrator git:
+        commands:
+        - /usr/bin/env sh .sqa/script.ready-magnolia-ibis.sh
+        container: qc.acc_homely-bistre-vole
+  QC.Doc:
+    repos:
+      github.com/indigo-dc/orchestrator find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-lilac-ant.sh
+        container: qc.doc_shabby-razzmatazz-mist
+      github.com/indigo-dc/orchestrator git:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-mauve-snail.sh
+        container: qc.doc_woozy-magnolia-okapi
+      github.com/indigo-dc/orchestrator markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-cinnamon-vole.sh
+        container: qc.doc_bluesy-coral-tapir
+  QC.Lic:
+    repos:
+      github.com/indigo-dc/orchestrator licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-wheat-stoat.sh
+        container: qc.lic_squeaky-pear-falcon
+  QC.Ver:
+    repos:
+      github.com/indigo-dc/orchestrator get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-peach-turkey.sh
+        container: qc.ver_wheezy-chocolate-slug
+timeout: 1800
