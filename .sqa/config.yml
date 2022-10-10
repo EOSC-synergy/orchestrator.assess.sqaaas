@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.7.0_no_kubectl
+      branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/indigo-dc/orchestrator:
       branch: master
@@ -15,32 +15,46 @@ sqa_criteria:
     repos:
       github.com/indigo-dc/orchestrator git:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-olive-deer.sh
-        container: qc.acc_queasy-crimson-frise
+        - /usr/bin/env sh .sqa/script.bluesy-champagne-labradoodle.sh
+        container: qc.acc_cranky-ecru-forest
   QC.Doc:
     repos:
       github.com/indigo-dc/orchestrator find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-platinum-barracuda.sh
-        container: qc.doc_stealthy-ivory-serval
+        - /usr/bin/env sh .sqa/script.nerdy-pumpkin-quetzal.sh
+        container: qc.doc_lumpy-mauve-tapir
       github.com/indigo-dc/orchestrator git:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-vermilion-crab.sh
-        container: qc.doc_cozy-flax-snake
+        - /usr/bin/env sh .sqa/script.lousy-silver-mandrill.sh
+        container: qc.doc_tasty-ochre-pinscher
       github.com/indigo-dc/orchestrator markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-ruby-liger.sh
-        container: qc.doc_cozy-fuchsia-cow
+        - /usr/bin/env sh .sqa/script.flaky-ochre-ray.sh
+        container: qc.doc_seedy-smalt-devil
   QC.Lic:
     repos:
       github.com/indigo-dc/orchestrator licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-cobalt-audemer.sh
-        container: qc.lic_stuffy-salmon-beagle
+        - /usr/bin/env sh .sqa/script.ready-ruby-husky.sh
+        container: qc.lic_cranky-puce-millipede
+  QC.Sty:
+    repos:
+      github.com/indigo-dc/orchestrator checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-azure-tzu.sh
+        container: qc.sty_blurry-cream-hyena
+      github.com/indigo-dc/orchestrator hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-dandelion-rattlesnake.sh
+        container: qc.sty_whiny-black-snake
+      github.com/indigo-dc/orchestrator jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-platinum-raccoon.sh
+        container: qc.sty_muggy-malachite-retriever
   QC.Ver:
     repos:
       github.com/indigo-dc/orchestrator get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-turquoise-labradoodle.sh
-        container: qc.ver_muggy-sangria-husky
+        - /usr/bin/env sh .sqa/script.randy-beige-turtle.sh
+        container: qc.ver_ugly-bronze-oriole
 timeout: 1800
