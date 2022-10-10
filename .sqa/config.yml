@@ -15,46 +15,46 @@ sqa_criteria:
     repos:
       github.com/indigo-dc/orchestrator git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-pumpkin-sponge.sh
-        container: qc.acc_queasy-denim-neanderthal
+        - /usr/bin/env sh .sqa/script.shabby-alizarin-mist.sh
+        container: qc.acc_pokey-sangria-mule
   QC.Doc:
     repos:
       github.com/indigo-dc/orchestrator find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-seashell-forest.sh
-        container: qc.doc_crabby-cream-gerbil
+        - /usr/bin/env sh .sqa/script.sunny-persimmon-axolotl.sh
+        container: qc.doc_ready-olive-quokka
       github.com/indigo-dc/orchestrator git:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-cerise-insect.sh
-        container: qc.doc_tacky-jade-chameleon
+        - /usr/bin/env sh .sqa/script.queasy-jade-sponge.sh
+        container: qc.doc_geeky-ultramarine-audemer
       github.com/indigo-dc/orchestrator markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-cerise-avocet.sh
-        container: qc.doc_queasy-blue-indri
+        - /usr/bin/env sh .sqa/script.pretty-tomato-rottweiler.sh
+        container: qc.doc_pokey-corn-setter
   QC.Lic:
     repos:
       github.com/indigo-dc/orchestrator licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-linen-lizard.sh
-        container: qc.lic_goopy-tangerine-hare
+        - /usr/bin/env sh .sqa/script.ready-sapphire-insect.sh
+        container: qc.lic_trippy-olivine-crane
   QC.Sty:
     repos:
       github.com/indigo-dc/orchestrator checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-cobalt-tarantula.sh
-        container: qc.sty_wheezy-carmine-numbat
+        - /usr/bin/env sh .sqa/script.cozy-ecru-abyssinian.sh
+        container: qc.sty_queasy-lemon-chamois
       github.com/indigo-dc/orchestrator hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-violet-hyena.sh
-        container: qc.sty_crappy-copper-dingo
+        - /usr/bin/env sh .sqa/script.slaphappy-white-skunk.sh
+        container: qc.sty_bumpy-ochre-audemer
       github.com/indigo-dc/orchestrator jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-gold-anteater.sh
-        container: qc.sty_bluesy-cinnabar-tamarin
+        - /usr/bin/env sh .sqa/script.dorky-bronze-wildebeest.sh
+        container: qc.sty_freaky-lime-bulldog
   QC.Ver:
     repos:
       github.com/indigo-dc/orchestrator get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-white-raccoon.sh
-        container: qc.ver_jumpy-ultramarine-lynx
+        - /usr/bin/env sh .sqa/script.wiggy-aquamarine-macaque.sh
+        container: qc.ver_chummy-turquoise-drever
 timeout: 1800
